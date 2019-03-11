@@ -1,0 +1,154 @@
+f = @(x) x^2 + 1 
+f(3)
+df = @(x) 2*x
+df(5)
+x = 1
+for k=1;10,x(k+1)=x(k)+f((x(k))/df(x(k));end
+for k=1;10,x(k+1)=x(k)+f(x(k)/df(x(k));end
+for k=1:10,x(k+1)=x(k)+f(x(k)/df(x(k));end
+for k=1:10,x(k+1)=x(k)+f(x(k))/df(x(k));end
+x
+x'
+fa = @(x) x^2-a
+a = 16
+result = fa(x)
+fa = @(x) x.^2-a
+result = fa(x)
+fa = @(x) x^2-a
+result = fa(2)
+fa = @(x) x^2-a
+for k=1:5,fa(x);end
+i=1:6
+i'
+for k=1:6,fa(x);end
+x
+for k=1:10,x(k+1)=x(k)+f(x(k))/df(x(k));end
+x
+for k=1:5,x=fa(x);end
+for k=1:6,result=(x+a/x)x0.5;end
+for k=1:6,result=(x+a/x)x0.5;end
+for k=1:6,result=(x+a/x)x0,5;end
+for k=1:6,result=(x+a/x)*0,5;end
+for k=1:6,result=(x+a/x)*0.5;end
+foclear all
+clear all
+clear
+cls
+x
+ = 1
+x = 1
+f=@(x) (x^2-16)
+f(4)
+df=@(x)2*x
+df(4)
+for k=1:6,x(k+1)=x(k)+(f(x(k))/df(x(c));end
+for k=1:6,x(k+1)=x(k)+(f(x(k))/df(x(c));end
+for k=1:6,x(k+1)=x(k)+f(x(k))/df(x(c));end
+for k=1:6,x(k+1)=x(k)+f(x(k))/df(x(k));end
+x
+x'
+f=@(x) (x^2+16)
+for k=1:6,x(k+1)=x(k)+f(x(k))/df(x(k));end
+x'
+for k=1:6,x(k+1)=x(k)-f(x(k))/df(x(k));end
+f=@(x) (x^2-16)
+for k=1:6,x(k+1)=x(k)-f(x(k))/df(x(k));end
+x'
+result = x - 4
+result'
+i'|x'
+[i' x']
+[i x]
+[i result]
+[i' result']
+[i' ,result']
+[i' x' resukt'
+]
+[i' x' resukt']
+[i' x' result']
+y = x - 4
+for k=1:6,x(k+1)=x(k)-f(x(k))/df(x(k));end
+y = x - 4
+[i' x' result']
+for k=1:6,x(k+1)=x(k)-f(x(k))/df(x(k));end
+y = x - 4
+x
+i=1:7
+[i' x' result']
+[i' x' y']
+A = y
+A = [i' x' y']
+a(1,2) = 0
+A
+[i' x' y']
+A = [i' x' y']
+A(1,3) = 0
+D = rand(2,3)
+D = randi(2,3)
+D = randi(2,3)
+D = randi(2,3)
+D = randi(2,3)
+D = randi(2,3)
+D
+D(:,1)
+D(2,:)
+D = rand(4,5)
+D = randi(4,5)
+D(2;2,:3:5)
+D(2:2,:3:5)
+D(2:2,3:5)
+D(2:3,3:5)
+D(2:3,3:5)=1
+D(2:3,3:5)+1
+D
+D(2:3,3:5)=+1
+D(2:3,3:5)+1
+D(2:3,3:5)= D(2:3,3:5)+1
+clc
+clear all
+f=@(x) = x
+f=@(x) x
+x=-5:0.1:5
+x
+plot(x,x)
+a=x^2
+a = x^2
+a = x^2;
+plot(x,x)
+gridon
+grid on
+plot(x,x,'r')
+grid on
+plot(x,x,'b'), grid on
+plot(x,x,'-r'), grid on
+plot(x,x,-'r'), grid on
+plot(x,x,-'-.b'), grid on
+plot(x,x,-'-.b')
+plot(x,x,-'--.b')
+plot(x,x,-'b')
+plot(x,x,-'b')
+plot(x,x,-'b')
+plot(x,x,'b')
+plot(x,x,'-.b')
+plot(x,x,'-.b'),grid on
+r=-2:0.01:2
+plot(cos(r)
+)
+plot(x,cos(r))
+plot(r,cos(r))
+plot(r,cos(r)), hold on
+plot(r,cos(r)), hold on
+plot(r,cos(r)), grid on hold on
+plot(r,cos(r)), grid on ,hold on
+hold on
+plot(r,1-0.5*r.^2,'r')
+hold on
+plot(r,1-0.5*r.^2+1/24*x^4,'y')
+plot(r,1-0.5*r.^2+(1/24*x^.4),'y')
+plot(r,1-0.5*r.^2+(1/24*x.^4),'y')
+plot(r,1-0.5*r.^2+(1/24)*x.^4,'y')
+plot(r,1-0.5*r.^2+(1/24)*x.^4,'y')
+plot(r,1-0.5*r.^2+(1/24)+x.^4,'y')
+plot(r,1-0.5*r.^2+((1/24)*x.^4),'y')
+plot(r,1-0.5*r.^2+((1/24)*x.^4),'r')
+plot(r,1-0.5*r.^2+((1/24)*r.^4),'g')
