@@ -1,1 +1,1 @@
-# CN
+# Códigos em octave (funcoes matemáticas para calculo numérico)
