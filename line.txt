@@ -152,3 +152,37 @@ plot(r,1-0.5*r.^2+(1/24)+x.^4,'y')
 plot(r,1-0.5*r.^2+((1/24)*x.^4),'y')
 plot(r,1-0.5*r.^2+((1/24)*x.^4),'r')
 plot(r,1-0.5*r.^2+((1/24)*r.^4),'g')
+
+Erro
+Sistema Linear
+A*x = b
+Calculo erro residual
+A*x-b = 0, é o ideal
+
+
+claer, clc
+k = 10
+D = rand(k,1); H = rand(k , 1);
+tic, for n = 1:k, V(n) = 1/12 * pi * (D(n) * H(n));end, toc
+
+
+A = [1 -3 2 ; -2 8 -1 ; 4 -6 5]
+b = [ 11 ; -15 ; 29]
+Au = [A b]
+
+x = (Au(2,1)/Au(1,1)*-1) * Au(1,:) + Au(2,:)
+x = (Au(3,1)/Au(1,1)*-1) * Au(1,:) + Au(3,:)
+U = [ 1 -3 2 11 ; 0 2 3 7 ; 0 0 -12 -6]
+U = [ 1 -3 2 ; 0 2 3  ; 0 0 -12 ]
+d = [ 11 ; 7 ; -6]
+SR(U,d)
+d = [ 11 ; 7 ; -36]
+SR(U,d)
+A
+re = A\b
+residuo = b - A * x
+residuo = b - A * re
+
+
+985285849
+akinatan@outlook.com
