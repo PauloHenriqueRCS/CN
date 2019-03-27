@@ -186,3 +186,12 @@ residuo = b - A * re
 
 985285849
 akinatan@outlook.com
+
+
+Para calcular um Sistema com Eliminacao de Gauss
+1. Use A , b
+2. Utilizar a funcao Eg(A,b)
+3. Extraia o Ar e o br da matriz aumentada
+4. Utilizar reut = SR(Ar,br)
+5. Pegue o resultado e calcule o residuo
+   Residuo = b - A * result'
