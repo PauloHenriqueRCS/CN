@@ -1,8 +1,8 @@
 %Algoritmo Substituicoes Sucessivas
-%Objetivo:Resolver o SISTEMA TRIANGULAR INFERIOR -> Lx = c, pelas substituições sucessivas
-%parâmetro de entradan n(,L,c) -> ordem, matriz triangular inferior e vetor independente
-%n -> pode ser calculado dentro da função
-%parâmetro de saída -> x{solução do STI}
+%Objetivo:Resolver o SISTEMA TRIANGULAR INFERIOR -> Lx = c, pelas substituiï¿½ï¿½es sucessivas
+%parï¿½metro de entradan n(,L,c) -> ordem, matriz triangular inferior e vetor independente
+%n -> pode ser calculado dentro da funï¿½ï¿½o
+%parï¿½metro de saï¿½da -> x{soluï¿½ï¿½o do STI}
 
 function x = SS (L,c)
   n = size(L,1);
