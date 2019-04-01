@@ -1,4 +1,4 @@
-f = @(x) x^2 + 1 
+﻿f = @(x) x^2 + 1 
 f(3)
 df = @(x) 2*x
 df(5)
@@ -192,6 +192,6 @@ Para calcular um Sistema com Eliminacao de Gauss
 1. Use A , b
 2. Utilizar a funcao Eg(A,b)
 3. Extraia o Ar e o br da matriz aumentada
-4. Utilizar reut = SR(Ar,br)
+4. Utilizar result = SR(Ar,br)
 5. Pegue o resultado e calcule o residuo
    Residuo = b - A * result'
