@@ -25,6 +25,6 @@ function [n,spa,cpa] = Alocacao()
   xlabel("10^n");
   ylabel("Elapsed Time");
   title ("Sem Pré-alocação(RED) VS Com Pré-alocação(BLUE)");
-  clear a b k n spa cpa;
+ % clear a b k n spa cpa;
   
 endfunction
