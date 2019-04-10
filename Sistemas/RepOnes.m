@@ -1,6 +1,6 @@
-function [x] = RepOnes()
+function [t1,t2] = RepOnes()
   clear all, clc;
-  N = round(logspace(1,10^1,10^2));
+  N = round(logspace(1,10,20));
   for n = 1:length(N)
     a = 50;
     tic();
@@ -23,7 +23,7 @@ function [x] = RepOnes()
   ylabel("Elapsed Time");
   title ("Loop(RED) VS Vetorizacao(BLUE)");
   legend('(:,ones())','repmat()');
-  clear N n a s t1 t2;
+  %clear N n a s t1 t2;
   
 endfunction
 
