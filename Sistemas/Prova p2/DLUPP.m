@@ -1,62 +1,59 @@
-function [L, U, P, x, y] = DLUPP(A,b)
-
+function [L, U, P, y, x, Residuo] = DLUPP(A,b)
+printf("DECOMPOSIÇÃO LU \n");
  Au = [A b];
  n = length(Au);
  L = eye(n - 1);
- p = zeros(1,n - 1);
- m = zeros(n - 1);
- P = zeros(n - 1);
- 
- for j = 1 : n - 1
-  pivo = max(Au(:, j));
-  l = find(Au(:,j) == pivo);
-    if (length(l) > 1)
-      l = l(2);
-    endif  
- 
-    if (j == 1 && l != 1)
-      aux = Au(l,:);
-      Au(l,:) = Au(1,:);
-      Au(1,:) = aux;
-      l = 1;
+ m = zeros(length(A));
+ p = 1:n-1;
+for j = 1 : n - 1
+  pivo = Au(j, j);
+  printf("Pivo = Au(%d,%d) -> %d \n", j,j,pivo);
+  for k = j + 1 : n - 1
+    if (max(Au(k, j)) > pivo)
+      swapLine = k;
+      pivo = Au(k, j);
+      printf("Novo Pivo = Au(%d,%d) -> %d \n", k,j,pivo);
+      printf("Linha L%d swap L%d \n", j,k);
+      aux =  Au(j, :);
+      Au(j, :) = Au(swapLine, :)
+      Au(swapLine, :) = aux
+      swapLine = p(j);
+      p(j) = p(k);
+      p(k) = swapLine;
     endif
-    
-     p(j) = l;
-     
-    for i = 1 : n - 1
-      if (i != l)
-         Au(i, :) = -(Au(i, j) / pivo) * Au(l, :) + Au(i, :);
-      endif
-    endfor
+  endfor
+  printf("p(%d) = %d\n",j,p(j));
+
+  for i = j : n - 1
+    if (i != j)
+     m(i,j) = Au(i, j) / pivo;
+     printf("L%d = - L%d / %d * L%d + L%d \n", i,i,pivo,j,i);
+     Au(i, :) = - m(i,j) * Au(j, :) + Au(i, :)
+    endif
+  endfor
 endfor
- 
 
-aux = Au(2,:);
-Au(2,:) = Au(4,:);
-Au(4,:) = aux;
-aux = Au(3,:);
-Au(3,:) = Au(4,:);
-Au(4,:) = aux;
+for i = 1 : n-2
+   for j = 1 : i
+     printf("L(%d,%d) = m(%d,%d)\n",i+1,j,i+1,j);
+   L(i+1,j) = m(i+1,j)
+   endfor
+endfor
 
+for e = 1 : n - 1
+  printf("P(%d,p(%d)) = 1 \n", e,p(e));
+  P(e,p(e)) = 1 
+endfor
 
 U = Au;
-U(:,end) = [];
+U(:,end) = []
+L
+P
+format bank;
+printf("Susbstituição Suscessiva (L,P*b)\n");
+y = SS(L,P*b)'
+printf("Substiyuição Retroativva (U,y)\n");
+x = SR(U,y')'
+Residuo = SLResiduo(A,b,x')
 
- for k = 2 : n - 1
-   for l = 1 : n - 1
-     if (k == l)
-       continue;
-     else
-       L(k,l) = m(p(k),l);
-     endif
-   endfor
- endfor
-
- for e = 1 : n - 1
-   P(e,p(e)) = 1;   
- endfor
- 
-y = SS(L,(P*b));
-x = SR(U,y')';
- 
 endfunction
