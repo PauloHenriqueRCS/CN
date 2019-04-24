@@ -1,0 +1,17 @@
+
+x = [ 0.1 0.6 0.8]
+y = [ 1.221 3.320 4.953]
+n = length(x);
+t = [ 0 : 0.01 : 1];
+m = length(t);
+plot(x,y,'o')
+hold on
+grid on
+plot(t,e.^(2*t),'k')
+hold on
+for i = 1 : m
+tt(i) = PLagrange(n,x,y,t(i));
+endfor
+plot(t,tt,'b')
+ttt = InterQ(x,y,t)
+plot(t,ttt,'g')

@@ -1,22 +1,12 @@
-function [r] = PQ(x,y)
-n = length(x);
-A = ones(n));
+function [PI] = InterQ(x,y,p)
+n = length(p);
+B = ones(length(x),1);
+A = [x(:) x(:).^2];
+A = [B A];
 
-A(:,2) = x;
-A(:,3) = x^2;
+[L, U, P, Y, X, Residuo] = DLUPP(A,y');
 
-endfunction
-x = [ 0.1 0.6 0.8]
-y = [ 1.221 3.320 4.953]
-n = length(x);
-m = length(t);
-t = [ 0 : 0.01 : 1];
-plot(x,y,'o')
-hold on
-grid on
-plot(t,e.^(2*t),'k')
-hold on
-for i = 1 : m
-tt(i) = PLagrange(n,x,y,t(i));
+for i = 1 : n
+ PI(i) = X(1) + X(2)*p(i) + X(3)*p(i)^2;
 endfor
-plot(t,tt,'b')
+endfunction
