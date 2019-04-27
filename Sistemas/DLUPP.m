@@ -1,4 +1,4 @@
-function [L, U, P, y, x, Residuo] = DLUPP(A,b)
+function [x, L, U, P, y, Residuo] = DLUPP(A,b)
  Au = [A b];
  n = length(Au);
  L = eye(n - 1);
