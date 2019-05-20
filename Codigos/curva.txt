@@ -1,0 +1,126 @@
+ erroB = 0;
+ for i=1 : 5
+ erroB +=((1.74+0.2*x(i))-y(i))^2
+ endfor
+ 
+  erroR = 0;
+ for i=1 : 5
+ erroR +=((1.5+0.25*x(i))-y(i))^2
+ endfor
+ 
+ exit
+# Octave 4.0.3, Mon May 20 08:51:58 2019 GMT <unknown@SBDL-0718>
+x = [ .3 2.7 4.5 5.9 7.8]
+y = [ 1.8 1.9 3.1 3.9 3.3]
+plot(x,y,'o'),grid on
+hold on
+plot(x,y,'-mo')
+plot(x,y,'-*')
+plot(x,y,'mo')
+plot(x,y,'o'),grid on
+hold on
+plot(x,1.74+0.2*x,'b')
+hold on
+plot(x,1.5+0.25*x,'r')
+1.74+0.2*5.9
+3.9-ans
+for i=0 : size(x)
+erro(i) = 1.74+0.2*x(i);
+erro2(i) = 1.5+0.25*x(i);
+endfor
+for i=0 : size(x)
+erro(i) += ((1.74+0.2*x(i))-y(i))^2;
+end
+for i=0 : size(x),erro(i) += ((1.74+0.2*x(i))-y(i))^2,end
+ for i=0 : size(x)
+ erro += ((1.74+0.2*x(i))-y(i))^2
+ end
+ erro = 0;
+ for i=0 : size(x)
+ erro += ((1.74+0.2*x(i))-y(i))^2
+ end
+ for i=0 : size(x)
+ erro += ((1.74+0.2*x(i))-y(i))^2
+ end
+for i=0 : size(x)
+ ((1.74+0.2*x(i))-y(i))^2
+ end
+ for i=0 : 4
+ ((1.74+0.2*x(i))-y(i))^2
+ end
+ ((1.74+0.2*5.9)-3.9)
+ ((1.74+0.2*5.9)-3.9)^2
+for i=0 : 4
+ ((1.74+0.2*x(i))-y(i))^2
+ endfor
+ for i=1 : 5
+ ((1.74+0.2*x(i))-y(i))^2
+ endfor
+ for i=1 : 5
+ erro +=((1.74+0.2*x(i))-y(i))^2
+ endfor
+  for i=1 : 5
+ sum(((1.74+0.2*x(i))-y(i))^2)
+ endfor
+ erro = 0;
+ for i=1 : 5
+ erro +=((1.74+0.2*x(i))-y(i))^2
+ endfor
+erro
+clear erro
+ erroB = 0;
+ for i=1 : 5
+ erroB +=((1.74+0.2*x(i))-y(i))^2
+ endfor
+  erroR = 0;
+ for i=1 : 5
+ erroR +=((1.5+0.25*x(i))-y(i))^2
+ endfor
+b1 = sum(x)*sum(y-5)*sum(x*y)/(sum(x)^2)-5*sum(x^2)
+b1 = sum(x)*sum(y)-5*sum(x*y)/(sum(x)^2)-5*sum(x^2)
+b1 = sum(x)*sum(y)-5*sum(x*y)/(sum(x)^2)-5*sum(x^2)
+size(x)
+b1 = sum(x)*sum(y)-5*sum(x*y)/(sum(x))^2-5*sum(x^2)
+b1 = sum(x)*sum(y)-5*sum(x*y)/(sum(x))^2-5*sum(x^2)
+b1 = sum(x)*sum(y)-5*sum(x*y)/(sum(x))^2-5*sum(x^2)
+b1 = sum(x)*sum(y)-5*sum(x*y)
+b1 = sum(x)*sum(y)
+b1 = sum(x)*sum(y)-5
+b1 = sum(x)*sum(y)-5*sum(x*y)
+sum(x*y)
+sum(x.*y)
+b1 = sum(x)*sum(y)-5*sum(x.*y)/(sum(x))^2-5*sum(x^2)
+b1 = sum(x)*sum(y)-5*sum(x.*y)/(sum(x)).^2-5*sum(x.^2)
+b1 = sum(x)*sum(y)-5*sum(x.*y)/(sum(x)).^2 -5 *sum(x.^2)
+b1 = sum(x)*sum(y)-5*sum(x.*y)/(sum(x)).^2-5*sum(x.^2)
+b0 = sum(y.-b1)*sum(x)/5
+b1 = sum(x).*sum(y)-5*sum(x.*y)/(sum(x)).^2-5*sum(x.^2)
+b1 = sum(x).*sum(y)-5*sum(x.*y)/(sum(x)).^2-5.*sum(x.^2)
+b1 = sum(x).*sum(y)-5.*sum(x.*y)/(sum(x)).^2-5.*sum(x.^2)
+b1 = sum(x).*sum(y).-5.*sum(x.*y)/(sum(x)).^2-5.*sum(x.^2)
+b1 = sum(x).*sum(y).-5*sum(x.*y)/(sum(x)).^2-5*sum(x.^2)
+b0 = sum(y.-b1)*sum(x)/5
+n=size(x)
+n
+n=length(x)
+b0 = sum(y.-b1)*sum(x)/n
+b1 = sum(x).*sum(y).-n*sum(x.*y)/(sum(x)).^2-n*sum(x.^2)
+b0 = sum(y.-b1)*sum(x)/n
+b1 = sum(x).*sum(y)-n.*sum(x.*y)/(sum(x)).^2-n*sum(x.^2)
+b1 = sum(x).*sum(y)-n.*sum(x.*y)/(sum(x)).^2-n*sum(x^2)
+b1 = sum(x).*sum(y)-n.*sum(x.*y)/(sum(x)).^2-n.*sum(x.^2)
+b1 = sum(x).*sum(y)-n.*sum(x.*y)/sum(x).^2-n*sum(x.^2)
+b1 = sum(x).*sum(y)-n.*sum(x.*y)./(sum(x).^2)-n*sum(x.^2)
+b1 = sum(x).*sum(y)-n.*sum(x.*y)./(sum(x).^2)-n*sum(x.^2)
+b1 = sum(x).*sum(y)-n.*sum(x.*y)./(sum(x).^2)-n*sum(x.^2)
+b1 = sum(x)*sum(y)-n.*sum(x.*y)./(sum(x).^2)-n*sum(x.^2)
+b1 = sum(x)*sum(y)-n*sum(x.*y)/(sum(x).^2)-n*sum(x.^2)
+b1 = sum(x)*sum(y)-n*sum(x.*y)/(sum(x)^2)-n*sum(x.^2)
+b1 = sum(x)*sum(y)-n*sum(x.*y)/(sum(x)^2)-n*sum(x.^2)
+b1 = sum(x)*sum(y)-n*sum(x.*y)/((sum(x))^2-n*sum(x.^2)
+)
+b1 = sum(x)*sum(y)-n*sum(x.*y)/((sum(x)).^2-n*sum(x.^2)
+)
+b1 = (sum(x)*sum(y)-n*sum(x.*y))/((sum(x)).^2-n*sum(x.^2))
+b0 = (sum(y)-b1*sum(x))/n
+plot(x,b1+b0*x,'-m')
