@@ -7,20 +7,12 @@
  for i=1 : 5
  erroR +=((1.5+0.25*x(i))-y(i))^2
  endfor
- 
- exit
-# Octave 4.0.3, Mon May 20 08:51:58 2019 GMT <unknown@SBDL-0718>
+
 x = [ .3 2.7 4.5 5.9 7.8]
 y = [ 1.8 1.9 3.1 3.9 3.3]
-plot(x,y,'o'),grid on
-hold on
-plot(x,y,'-mo')
-plot(x,y,'-*')
-plot(x,y,'mo')
-plot(x,y,'o'),grid on
-hold on
+
 plot(x,1.74+0.2*x,'b')
-hold on
+
 plot(x,1.5+0.25*x,'r')
 1.74+0.2*5.9
 3.9-ans
