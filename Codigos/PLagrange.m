@@ -1,6 +1,6 @@
 function [P] = PLagrange(x,y,p)
-  p
-n = length(p)
+
+n = length(p);
 m = length(x);
 for k = 1 : n
 r = 0;
