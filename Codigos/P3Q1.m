@@ -1,9 +1,11 @@
-function [R] = P3Q1()
+function [result] = P3Q1()
+clc, clear all;
+x = [.4 1.25 2.71 3.5];
+y = x.*sin(pi.*x);
+%y = 2.5;
 
-x = [.4 1.25 2.71 3.5]
-t = 2.5;
-y = x.*sin(pi.*x)
 
-R = PLagrange(x,y,t)
+
+R = PLagrange(x,y,x)
 
 endfunction
