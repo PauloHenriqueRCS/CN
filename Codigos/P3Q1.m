@@ -2,22 +2,21 @@ function [result] = P3Q1()
 clc, clear all;
 x = [.4 1.25 2.71 3.5];
 y = x.*sin(pi.*x);
-n = length(x);
-m = length(y);
 p = 2.5;
 
-%P1 = InterL([x(1) x(2)],[y(1) y(2)],2.5)
-P1 = PLagrange([x(1) x(2)],[y(1) y(2)],2.5)
-P1 = PNewton([x(1) x(2)],[y(1) y(2)],2.5)
+format long;
+plot(x,y,'-m');
+hold on, grid on
 
-%P2 = InterQ([x(1) x(2) x(3)],[y(1) y(2) y(3)],2.5)
-P2 = PLagrange([x(1) x(2) x(3)],[y(1) y(2) y(3)],2.5)
-P2 = PNewton([x(1) x(2) x(3)],[y(1) y(2) y(3)],2.5)
 
-P3 = PLagrange(x,y,2.5)
-P3 = PNewton(x,y,2.5)
-% garrei no spline
-P3 = SplineA(n,x,y,m,[2.5 5])
+PN(1) = PNewton([x(1) x(2)],[y(1) y(2)],2.5);
+PN(2) = PNewton([x(1) x(2) x(3)],[y(1) y(2) y(3)],2.5);
+PN(3) = PNewton(x,y,2.5);
 
+title("Polinômios");
+xlabel("x");
+ylabel("f(x) = xsen(pi*x)");
+legend({"f(x) = xsen(pi*x)","P1"}, "location", "east");
+legend show;
 
 endfunction

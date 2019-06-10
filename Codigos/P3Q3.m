@@ -1,17 +1,14 @@
 function [result] = P3Q3()
-
+clc, clear all;
 %Altura
 x = [ 183 173 168 188 158 163 193 163 178 ];
 %Peso
 y = [ 79 69 70 81 61 63 79 71 73 ];
 
 plot(x,y,'o');
-%plot(y,x,'o');
 hold on, grid on;
 U = MinimosQ(x,y)
 plot(x,U,'-m');
-%U = MinimosQ(y,x);
-%plot(y,U,'-m');
 hold on;
 
 title("Diagrama de Dispersão");
